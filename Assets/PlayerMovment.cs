@@ -19,7 +19,7 @@ public class PlayerMovment : MonoBehaviour
     {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
-        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+        Vector3 direction = new Vector3(horizontal, 0.0f, vertical).normalized;
 
 
         if(direction.magnitude >= 0.01f)
