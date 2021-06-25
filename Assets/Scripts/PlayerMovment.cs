@@ -1,10 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
+[RequireComponent(typeof(NavMeshAgent))]
 public class PlayerMovment : MonoBehaviour
 {
+    NavMeshAgent agent;
 
+
+    private void Start() 
+    {
+        agent = GetComponent<NavMeshAgent>();    
+    }
+
+
+    public void MoveToPoint(Vector3 point)
+    {
+        agent.SetDestination(point);
+    }
+
+
+
+
+
+
+    /*
     public CharacterController controller; 
     public float speed = 12f;
     public float smoothingTime = 0.1f;
@@ -35,4 +54,5 @@ public class PlayerMovment : MonoBehaviour
             gameObject.GetComponent<Animator>().enabled = false;
         }
     }
+    */
 }
